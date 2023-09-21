@@ -35,6 +35,35 @@ html,body {
     font-size: 2.5rem;
     color: #ffff93;
     text-shadow: 2px 2px #000000;
+    position: relative;
+}
+#game::after {
+    content: '';
+    position: absolute;
+    height: 5px;
+    background-color: #ffff93;
+    width: 0%;
+    bottom: 0px;
+    left: 0%;
+}
+#game:hover::after {
+    content: '';
+    animation: underline 1s ease-in;
+}
+@keyframes underline {
+    0% {
+        left: 0px;
+        bottom: 0px;
+        width: 0%;
+    }
+    50% {
+        left: 0%;
+        width: 100%;
+    }
+    100% {
+        left: 100%;
+        width: 0%;
+    }
 }
 
 
